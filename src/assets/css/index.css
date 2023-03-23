@@ -1,0 +1,294 @@
+/*Import google font*/
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Righteous&display=swap');
+
+/*Genral*/
+body {
+  margin: 2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+  font-size: 30px;
+  color: #f8d707;
+  padding: 30px;
+  }
+
+/*Nav bar*/
+.header{
+  background-color:#f8d707;
+}
+
+.nav ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+  padding: 50px 10px 10px;
+}
+
+/*Anchor text*/
+.nav a{
+  text-decoration: none;
+  font-size: 20px;
+  color: gray;
+}
+
+.nav a:hover {
+  color: green;
+}
+
+/*Home banner*/
+.home-banner{
+  width: 100%;
+  height: 30%;
+}
+
+.home-banner-container {
+  position: relative;
+}
+
+.home-banner-text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  font-family: 'Edu NSW ACT Foundation', cursive;
+  font-size: 3rem;
+  font-weight: 200;
+  line-height: 4rem;
+}
+
+/*Personal logo on home banner*/
+.logo {
+  position: absolute;
+  width: 15%;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 200;
+  line-height: 4rem;
+  text-shadow: 2px 2px #000;
+}
+
+/*About*/
+.profile-pic {
+  width: 500px;
+  float: right;
+  margin-left: 20px; /* adjust as needed */
+}
+
+.profile p{
+  padding: 50px;
+  font-family: 'Edu NSW ACT Foundation', cursive;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+/*Projects*/
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #f8d707;
+
+}
+
+.project{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project1, .project2, .project3, .project4 {
+  width: 600px;
+  height: auto;
+  margin: 10px;
+  object-fit: cover;
+}
+
+.description {
+  text-align: center;
+  margin-right: 20px;
+}
+
+/*Contact*/
+.contactme {
+font-size:20px;
+  border: 1px solid #ddd;
+  max-width: 60vw;
+  height: 50vh;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #f8d707;
+}
+
+/*Contact form*/
+.form-group {
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  display: block;
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group textarea {
+  display: block;
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  resize: vertical;
+  min-height: 150px;
+}
+
+/*Contact submit-button*/
+button[type="submit"] {
+  background-color: gray;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: white;
+  color: #f8d707;
+}
+
+.toggle{
+  display: none;
+}
+
+/*Mobile Responsive- breakpoint 390px*/
+@media only screen and (max-width: 390px) {
+  /*hide the horizontal nav*/
+.nav{
+  display: none;
+}
+
+/*display the hidden menu when reach breakpoint*/
+.toggle {
+  display: flex;
+  align-items: center;
+}
+
+.toggle svg {
+  cursor: pointer;
+  margin: 10px;
+}
+
+.toggle-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 1em;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+}
+
+/*Show toggle hidden menu*/
+.toggle-menu.show {
+  top: 7%;
+  display: block;
+  height: 100%;
+  width: 50%;
+  z-index: 1;
+
+}
+
+.toggle-menu li {
+  margin: 0.5em 0;
+}
+
+.toggle-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  display: block;
+  margin: 0.5em 0;
+}
+
+/*Home banner-mobile*/
+.home-banner-container{
+  background-color: #f8d707;
+  height: 100vh;
+}
+
+.home-banner{
+  width: 100%;
+  height: auto;
+}
+.home-banner-text{
+  font-size: 22px;
+  line-height:24px;
+  top:70%;
+}
+
+/*Profile pic*/
+.profile-pic {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px; /* Add margin to the bottom */
+}
+
+.profile p{
+  width: 90% ;
+  padding: 20px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0;
+}
+
+.project img{
+  width:280px;
+}
+
+/*Contact form resize*/
+.contactme {
+    max-width: 80vw;
+    height: 70vh;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #f8d707;
+  }
+}
